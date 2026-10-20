@@ -34,17 +34,17 @@ nars_war = {
 	}
 }
 
-nars_emperor = {
+nars_political = {
 	icon = {
-		reference = "gfx/interface/icons/event_types/type_moral.dds"
+		reference = "gfx/interface/icons/event_types/type_ep3_governor.dds"
 	}
 	header_background = {
-		reference = "gfx/interface/window_event/event_header_grey.dds"
+		reference = "gfx/interface/window_event/event_header_purple.dds"
 	}
 	sound = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_domain"
 	}
 	background = {
-		reference = nars_emperor
+		reference = nars_political
 	}
 }

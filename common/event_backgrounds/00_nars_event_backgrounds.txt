@@ -12,9 +12,9 @@ nars_war = {
 	}
 }
 
-nars_emperor = {
+nars_political = {
 	background = {
-		reference = "gfx/interface/illustrations/event_scenes/nars_emperor.dds"
+		reference = "gfx/interface/illustrations/event_scenes/nars_political.dds"
 		ambience = "event:/DLC/FP2/SFX/Events/courtyard"
 	}
 }

@@ -53,12 +53,12 @@
 		virtues = {
 			diligent = { weight = 50 scale = 1.5 }
 			just = { weight = 25 scale = 1 }
-			stubborn = { weight = 20 scale = 1 }
+			lustful = { weight = 20 scale = 1 } #The race is almost extinct, they need to BREED
 		}
 		sins = {
 			lazy = { weight = 20 scale = 1 }
 			arbitrary = { weight = 20 scale = 1 }
-			fickle = { weight = 20 scale = 1 }
+			chaste = { weight = 20 scale = 1 }
 		}
 	}
 

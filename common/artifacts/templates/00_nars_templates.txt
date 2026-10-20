@@ -11,6 +11,9 @@
 	can_repair = {
 		always = yes
 	}
+	is_holy_relic = {
+		religion = religion:selian_religion
+	}
 	fallback = {
 		prowess = 5
 		monthly_prestige = 0.5
@@ -50,6 +53,9 @@ anduril_template = {
 	can_benefit = {
 		is_selian = yes
 	}
+	is_holy_relic = {
+		religion = religion:selian_religion
+	}
 	can_reforge = {
 		always = yes
 	}
@@ -76,6 +82,9 @@ ilyanil_template = {
 	}
 	can_reforge = {
 		always = yes
+	}
+	is_holy_relic = {
+		religion = religion:selian_religion
 	}
 	can_repair = {
 		always = yes

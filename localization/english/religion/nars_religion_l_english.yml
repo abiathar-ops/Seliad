@@ -21,23 +21,17 @@
  nars_1_rite_adherent_plural: "Timoûkhoi"
  nars_1_rite_desc: "Derived from the records of $game_concept_selian$ antiquity and the new teachings of $Alnars$, Timés revolves around the concept of vigorous erudition, in which adherents are expected to pursue scholarly pursuits in moderation as a path to enlightenment."
 
- nars_2_rite: "Orthótēs"
- nars_2_rite_adj: "Orthótētic"
- nars_2_rite_adherent: "Orthótētēs"
- nars_2_rite_adherent_plural: "Orthótētai"
- nars_2_rite_desc: "Forgotten dogma from the $game_concept_narsokratia$ of the $game_concept_selianes$, $nars_2_rite$ is a hierarchial, chauvinistic rite dating back to their time as unrivaled hegemons. Adherents believe in their unquestionable sacred mandate to dominate lesser cultures."
+ nars_0_rite: "Ortótēs"
+ nars_0_rite_adj: "Ortótētic"
+ nars_0_rite_adherent: "Ortótētēs"
+ nars_0_rite_adherent_plural: "Ortótētai"
+ nars_0_rite_desc: "Forgotten dogma from the $game_concept_narsokratia$ of the $game_concept_selianes$, $nars_0_rite$ is a hierarchial, chauvinistic rite dating back to their time as unrivaled hegemons. Adherents believe in their unquestionable sacred mandate to dominate lesser cultures."
 
- nars_3_rite: "Ménotēs"
- nars_3_rite_adj: "Ménotētic"
- nars_3_rite_adherent: "Ménotētēs"
- nars_3_rite_adherent_plural: "Ménotētai"
- nars_3_rite_desc: "Forged in the harshness of Misthophóroi life, $nars_3_rite$ is a militaristic rite filled with warmongers. Adherents believe that the future for $game_concept_selians$ cannot be found in traditions and must be secured through arms as they adapt to more wars."
-
- nars_4_rite: "Isótēs"
- nars_4_rite_adj: "Isótic"
- nars_4_rite_adherent: "Ísos"
- nars_4_rite_adherent_plural: "Ísoi"
- nars_4_rite_desc: "Drawn in the years after $Alnars$' surfacing, $nars_4_rite$ holds that of which survives are only so through adaptation, and that the $game_concept_selianes$ must in turn oblige by it. The $nars_4_rite_adherent_plural$ look outward to other peoples and seek a more distinct path."
+ nars_2_rite: "Isótēs"
+ nars_2_rite_adj: "Isótic"
+ nars_2_rite_adherent: "Ísos"
+ nars_2_rite_adherent_plural: "Ísoi"
+ nars_2_rite_desc: "Forged in the harshness of Misthophóroi life, $nars_2_rite$ is a militaristic rite filled with warmongers. Adherents believe that the future for $game_concept_selians$ cannot be found in traditions and must be secured through arms as they adapt to more wars."
 
  # Gods and Flavorization 
  nars_high_god_name:0 "Narsés"

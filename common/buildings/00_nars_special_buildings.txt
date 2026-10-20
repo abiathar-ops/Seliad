@@ -63,6 +63,7 @@ aretaic_school_01 = {
 	flag = special_university 
 	flag = travel_point_of_interest_learning
 	flag = religious_studies_location
+	flag = holy_building
 }
 
 brothel_complex_01 = {

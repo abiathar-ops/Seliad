@@ -117,40 +117,6 @@ on_trait_added = {
 # --- 6. INTRO EVENTS ---
 nars_intro_on_start = {
     effect = {
-        # 1. Player-Specific Intro Events
-        every_player = {
-            limit = {
-                is_alive = yes
-                is_selian = yes
-            }
-            trigger_event = { id = nars_intro.1001 days = 1 }
-        }
-        if = {
-            limit = {
-                any_player = {
-                    is_alive = yes
-                    is_selian = no
-                }
-            }
-            random_player = {
-                limit = {
-                    is_alive = yes
-                    is_selian = no
-                }
-                trigger_event = { id = nars_intro.0001 days = 1 }
-            }
-        }
-        else = {
-            random_ruler = {
-                limit = {
-                    is_alive = yes
-                    is_ai = yes
-                }
-                trigger_event = { id = nars_intro.0001 days = 1 }
-            }
-        }
-
-        # 2. Global Bonuses for All Rulers (Player + AI)
         every_ruler = {
             limit = {
                 is_alive = yes
@@ -168,6 +134,38 @@ nars_intro_on_start = {
             if = {
                 limit = { is_landed = yes } 
                 selian_settle_county_effect = yes
+            }
+        }
+        # 1. Player-Specific Intro Events
+        every_player = {
+            limit = {
+                is_alive = yes
+                is_selian = yes
+            }
+            trigger_event = nars_intro.1001
+        }
+        if = {
+            limit = {
+                any_player = {
+                    is_alive = yes
+                    is_selian = no
+                }
+            }
+            random_player = {
+                limit = {
+                    is_alive = yes
+                    is_selian = no
+                }
+                trigger_event = nars_intro.0001
+            }
+        }
+        else = {
+            random_ruler = {
+                limit = {
+                    is_alive = yes
+                    is_ai = yes
+                }
+                trigger_event = nars_intro.0001
             }
         }
     } 

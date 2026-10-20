@@ -51,6 +51,18 @@
  tenet_nars_deviance_no_actor: "Aporrētoi"
  tenet_nars_deviance_desc:0 "Shrouded in taboo, these holy courtesans prove the gods speak clearly through passion."
 
+ tenet_nars_records_name:0 "Archivists"
+ tenet_nars_records_no_actor: "Hypomnēmata"  
+ tenet_nars_records_desc:0 "The wisdom of past eras is meticulously recorded and studied, turning scholarly pursuit into a holy duty."
+
+ tenet_nars_patronage_name:0 "Almsgivings"
+ tenet_nars_patronage_no_actor: "Philanthropia"  
+ tenet_nars_patronage_desc:0 "Material wealth is a sacred stewardship, multiplied and sanctified through generous almsgiving and civic patronage."
+
+ tenet_nars_spoils_name:0 "Plunderers"
+ tenet_nars_spoils_no_actor: "Laýra"  
+ tenet_nars_spoils_desc:0 "The fall of enemy strongholds and the submission of captives feed both our terrifying martial dread and our fierce piety."
+
  nars_special_name: "Hegemons of Old"
  nars_special_2_name: "Scholars of Yore"
 
@@ -66,4 +78,5 @@
 
  doctrine_parameter_enable_produce_amphora: "Unlocks the #v $decision_produce_amphora$#! [decision|E]"
  doctrine_parameter_enable_piously_devote: "Unlocks the #v $decision_piously_devote$#! [decision|E]"
+ doctrine_parameter_enable_selian_duchy_conversion: "Unlocks the #V Enforce $game_concept_selianes$#! [decision|E] per #color_green 25#! years"
  narsokratia_must_be_faithfully_restored_global_not: "[narsokratia|E] must be faithfully restored"

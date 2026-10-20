@@ -65,7 +65,7 @@ nars_construction.1001 = {
 	type = character_event
 	title = nars_construction.1001.t
 	desc = nars_construction.1001.desc
-	theme = nars_faith
+	theme = nars_political
 
 	left_portrait = {
 		character = root
@@ -101,7 +101,7 @@ nars_construction.1002 = {
 	type = character_event
 	title = nars_construction.1002.t
 	desc = nars_construction.1002.desc
-	theme = nars_faith
+	theme = nars_political
 
 	left_portrait = {
 		character = root

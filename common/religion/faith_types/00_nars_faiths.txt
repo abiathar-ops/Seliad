@@ -4,7 +4,7 @@
 	faith_details = {
 		religion = selian_religion
 		color = { 230 228 216 }
-		icon = islam_takbir_03 #custom_faith_dove
+		icon = islam_tuareg_03 #islam_rub_el_hizb_knot_03 #custom_faith_dove
 	}
 
 	tenets = {
@@ -12,6 +12,7 @@
 		tenet_nars_sanguine
 		tenet_nars_erudition
 		tenet_nars_university
+		tenet_nars_records
 
 		tenet_nars_endgame
 
@@ -19,10 +20,12 @@
 		tenet_nars_artisans
 		tenet_nars_statecraft
 		tenet_nars_tolerance
-
+		tenet_nars_patronage
+		
 		tenet_nars_crusade
 		tenet_nars_warlike
 		tenet_nars_vestals
 		tenet_nars_deviance
+		tenet_nars_spoils
 	}
 }
