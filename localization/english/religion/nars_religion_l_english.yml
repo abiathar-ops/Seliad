@@ -19,13 +19,7 @@
  nars_1_rite_adj: "Timētic"
  nars_1_rite_adherent: "Timoûkhos"
  nars_1_rite_adherent_plural: "Timoûkhoi"
- nars_1_rite_desc: "Derived from the records of $game_concept_selian$ antiquity and the new teachings of $Alnars$, Timés revolves around the concept of vigorous erudition, in which adherents are expected to pursue scholarly pursuits in moderation as a path to enlightenment."
-
- nars_0_rite: "Ortótēs"
- nars_0_rite_adj: "Ortótētic"
- nars_0_rite_adherent: "Ortótētēs"
- nars_0_rite_adherent_plural: "Ortótētai"
- nars_0_rite_desc: "Forgotten dogma from the $game_concept_narsokratia$ of the $game_concept_selianes$, $nars_0_rite$ is a hierarchial, chauvinistic rite dating back to their time as unrivaled hegemons. Adherents believe in their unquestionable sacred mandate to dominate lesser cultures."
+ nars_1_rite_desc: "Derived from yore traditions of the antique $game_concept_narsokratia$ along with contemporary teachings of $Alnars$, $nars_1_rite$ revolves around the concept of erudition, in which adherents are expected to pursue knowledge to form their own path to enlightenment."
 
  nars_2_rite: "Isótēs"
  nars_2_rite_adj: "Isótic"
@@ -36,8 +30,8 @@
  # Gods and Flavorization 
  nars_high_god_name:0 "Narsés"
  nars_high_god_name_possessive:0 "Narsés'"
- nars_high_god_name_alternate:0 "Phōkas"
- nars_high_god_name_alternate_possessive:0 "Phōkas'"
+ nars_high_god_name_alternate:0 "Phōkás"
+ nars_high_god_name_alternate_possessive:0 "Phōkás'"
  nars_devil_name:0 "Baāl"
  nars_devil_name_possessive:0 "Baāl's"
  nars_evil_god_agares:0 "Agarés"

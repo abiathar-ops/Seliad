@@ -41,7 +41,7 @@
 	doctrine = doctrine_scriptural 
 
 	#Allow pilgrimages
-	doctrine = doctrine_pilgrimage_encouraged
+	doctrine = doctrine_pilgrimage_local_rites
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_sky_burial

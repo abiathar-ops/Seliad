@@ -31,20 +31,3 @@ nars_2_rite = {
 
 	cultures = { selian }
 }
-
-nars_0_rite = {
-	name = nars_0_rite
-	desc = nars_0_rite_desc
-	faith = nars_1_faith
-	icon = islam_tuareg_03 #yumaism_05 #yogacara_01 #zunist_05 #christianity_waldensian_04
-	convert = no
-	color = { 230 228 216 }
-
-	tenets = {
-		tenet_nars_pantheon
-		tenet_nars_endgame
-		tenet_nars_warlike
-	}
-
-	cultures = { selian }
-}

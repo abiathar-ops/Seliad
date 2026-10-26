@@ -10,23 +10,13 @@
 		}
 
 		prohibited = {
-			tenet_nars_tolerance
+			tenet_nars_crusade
+			tenet_nars_warlike
 			tenet_nars_deviance
 		}
 
 		known = {
-			tenet_nars_university
-			tenet_nars_records
-
-			tenet_nars_banking
-			tenet_nars_artisans
-			tenet_nars_statecraft
-			tenet_nars_patronage
-			
-			tenet_nars_crusade
-			tenet_nars_warlike
-			tenet_nars_vestals
-			tenet_nars_spoils
+			tenet_nars_artisans	
 		}
 	}
 }

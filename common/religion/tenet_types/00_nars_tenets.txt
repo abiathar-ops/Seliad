@@ -1,19 +1,4 @@
 ﻿# Sixteen Tenets: three diverging paths (Narses = Learning, Phokas = Stewardship, Enuo = Martial),
-# five themed tenets each, plus one Mega Tenet for the Endgame Faith that fuses the best of the other 15.
-#
-# SYMBIOSES: each pairing feeds the other. [+Sx] marks parameters added for that pairing.
-# S1  Stress <-> Seclusion          sanguine: learning_per_stress_level makes stress fuel, losing stress grants piety
-# S2  Condemn <-> Revoke <-> Clemency   pantheon + erudition: condemned vassals lose titles tyranny-free, sparing them pays fulfillment
-# S3  Temples <-> Holy sites        pantheon + erudition: temples give development and piety, holy sites and pilgrim circuits give prosperity
-# S4  Study <-> Scholar             records + university: scholar trait sources feed scholasticism_is_holy
-# S5  Gold <-> Piety flywheel       banking + patronage: donations buy piety, piety raises tax and stewardship
-# S6  Craft <-> Sacrifice           artisans: amphora decision supplies cheap artifacts to destroy for piety
-# S7  Culture <-> Conversion <-> Calm   statecraft + tolerance: convert fast, keep vassals quiet, minorities pay
-# S8  Peace pays                    tolerance piety_from_long_peace -> banking tax per piety level
-# S9  Kill <-> Trophy <-> Piety     crusade + warlike: kills give heads, heads give piety, piety gives prowess
-# S10 Seduction <-> Fertility <-> Children   deviance + vestals: sensual traits raise fertility, births give piety, hooks and gold
-# S11 Siege <-> Capture <-> Ransom or Execute   spoils (+ patronage ransom captives)
-# S12 Dread <-> Piety               spoils: executions and sieges build dread, dread gives piety and knight strength
 
 # Mega Tenet
 tenet_nars_endgame = {
@@ -26,7 +11,7 @@ tenet_nars_endgame = {
 		}
 	}
 	desc = tenet_nars_endgame_desc
-	icon = tenet_acts_of_apostles #tenet_household_gods
+	icon = tenet_nars_0_rite #tenet_household_gods
 
 	piety_cost = {
 		value = faith_tenet_cost_massive
@@ -44,37 +29,39 @@ tenet_nars_endgame = {
 		}
 	}
 
-	# One parameter per mechanical loop, taken from the 15 route tenets.
 	parameters = {
-		# Piety sources (one from every route)
+		enable_produce_amphora
+		reforging_artifacts_costs_piety
+		destroying_artifacts_is_pious
+		tenet_simony_wealth_fulfillment
+		tenet_adaptive_conversion_resistance
+		better_artifacts
+		tenet_pentarchy_holy_site_prosperity
+		allow_adopt_any_holy_site
+		enable_selian_duchy_conversion				# Custom hook: periodically offers a decision to convert a duchy to Selian (needs your decision script)
 		piety_from_seduction_active					# Enuo: deviance
-		# Piety converters
-		tenet_tax_increase_per_piety_level			# Phokas: banking
-		# Learning
-		scholasticism_is_holy						# Narses: records
-		tenet_scholasticism_university_bonus		# Narses: university
-		# Governance
-		tenet_legalism_title_integration			# Phokas: statecraft
-		tenet_legalism_sinful_revocation			# Narses: erudition
 		same_culture_conversion_bonus_active		# Phokas: statecraft
 		same_faith_promote_culture_bonus_active		# Phokas: statecraft
 		reduced_vassal_religion_discontent			# Phokas: tolerance
-		# Family
 		parents_get_hooks_on_children
-		children_less_likely_to_be_burdened			# Enuo: vestals
 		healthier_children_active					# Enuo: vestals
-		# War
 		tenet_miles_christi_holy_weapon_blessing	# Enuo: warlike
 		tenet_miles_christi_combat_fulfillment		# Enuo: warlike
-		# Custom hook: periodically offers a decision to convert a duchy to Selian (needs your decision script)
-		enable_selian_duchy_conversion
 	}
 
 	character_modifier = {
+		monthly_influence = 0.5
+		ignore_opinion_of_different_faith = yes
 		learning_per_piety_level = 1
 		learning_per_stress_level = 1				# Narses: sanguine
 		development_growth_factor = 0.25			# best of erudition / sanguine
 		domain_tax_mult = 0.25						# Phokas: banking
+	}
+
+	virtues = { 
+		nars_naturalis = { weight = 15 scale = 3 }
+		nars_hegemon = { weight = 15 scale = 3 }
+		loyal = { weight = 15 scale = 1 }
 	}
 
 	personal_tenet_modifier = {
@@ -86,6 +73,9 @@ tenet_nars_endgame = {
 
 	personal_tenet_parameters = {
 		# Fulfillment from every pillar
+		tenet_pentarchy_development_growth_in_holy_sites
+		tenet_pentarchy_pilgrim_circuit
+		tenet_pentarchy_pilgrim_circuit_companions
 		tenet_pursuit_of_power_war_victory_fulfillment
 		tenet_hesychasm_losing_stress_grants_piety
 		tenet_human_sacrifice_execution_piety_bonus	# moved here: personal-only flag
@@ -103,7 +93,7 @@ tenet_nars_pantheon = {
 	}
 
 	desc = tenet_nars_pantheon_desc
-	icon = tenet_nars #tenet_bhakti
+	icon = tenet_nars_1_rite #tenet_bhakti
 
 	piety_cost = {
 		value = faith_tenet_cost_massive
@@ -124,20 +114,22 @@ tenet_nars_pantheon = {
 	}
 
 	parameters = {
-		temporal_condemnation_enabled				# S2
-		temporal_condemnation_criminal				# S2
-		enable_piously_devote
-		building_temples_gives_development			# S3
-		monastic_schools_allowed_in_every_holding_type
-		inspections_unlocked_and_costs_piety
-		inspection_gives_devotion
-		tenet_divine_liturgy_temple_piety			# +S3 temples give piety as well as development
-	}
-
-	personal_tenet_parameters = {
+		tenet_astrology_divination_bonus
+		tenet_astrology_mystic_trait
+		tenet_astrology_auspicious_timing
 		tenet_benevolent_governance_inspection_fulfillment
 		tenet_benevolent_governance_clemency_fulfillment		# S2
 		tenet_benevolent_governance_disaster_relief_fulfillment	# +S2
+		temporal_condemnation_enabled				# S2
+		temporal_condemnation_criminal				# S2
+		enable_piously_devote
+		inspection_gives_devotion			
+	}
+
+	personal_tenet_parameters = {
+		divine_the_stars_active
+		inspections_unlocked_and_costs_piety
+		building_temples_gives_development
 	}
 }
 
@@ -151,17 +143,7 @@ tenet_nars_erudition = {
 		}
 	}
 	desc = tenet_nars_erudition_desc
-	icon = tenet_adorcism
-	# tenet_household_gods.dds
-	# tenet_celestial_hierarchy.dds
-	# tenet_consolamentum.dds
-	# tenet_filioque.dds
-	# tenet_hyperdulia.dds
-	# tenet_dulia.dds
-	# tenet_hesychasm.dds
-	# tenet_peace_of_god.dds
-	# tenet_sky_burials.dds
-	# tenet_transubstantiation.dds
+	icon = tenet_nars_1_rite #tenet_adorcism
 
 	piety_cost = {
 		value = faith_tenet_cost_massive
@@ -182,24 +164,25 @@ tenet_nars_erudition = {
 	parameters = {
 		tenet_original_sin_county_conversion_bonus	# win the holy war, then convert the counties
 		literalism_holy_war_cb_active
+		monastic_schools_allowed_in_every_holding_type
 		tenet_pentarchy_holy_site_prosperity		# S3
 		pilgrimage_decision_active					# +S3
-		tenet_inner_journey_humble_pilgrimage_bonus	# +S3
 		legalism_reduced_faction_virtues			# S2
 		tenet_legalism_sinful_revocation			# S2
+		tenet_scholasticism_university_bonus
+		tenet_scholasticism_cheaper_adult_education
+		tenet_scholasticism_court_scholar
+		tenet_divine_liturgy_temple_piety
+	}
+
+	personal_tenet_character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.1
 	}
 
 	personal_tenet_parameters = {
 		tenet_pentarchy_development_growth_in_holy_sites
 		tenet_pentarchy_pilgrim_circuit
 		tenet_pentarchy_pilgrim_circuit_companions
-	}
-
-	traits = {
-		# Mutual recognition between patriarchates
-		virtues = {
-			loyal = { weight = 15 scale = 1 }
-		}
 	}
 }
 
@@ -213,7 +196,7 @@ tenet_nars_sanguine = {
 		}
 	}
 	desc = tenet_nars_sanguine_desc
-	icon = tenet_sky_burials
+	icon = tenet_nars_1_rite #tenet_sky_burials
 
 	piety_cost = {
 		value = faith_tenet_cost_massive
@@ -228,13 +211,18 @@ tenet_nars_sanguine = {
 	}
 
 	parameters = {
+		alexandrian_catechism_catechesis_conversion		# S7 convert...
 		allow_adopt_any_holy_site
 		reincarnation_events_active
 		meditation_mechanics_active					# S1 vent stress
+		tenet_esotericism_mystic_education
+		tenet_esotericism_eccentric_education
+		tenet_esotericism_eccentric_bonuses
 		#less_likely_to_become_infirm
 	}
 
 	character_modifier = {
+		cultural_head_fascination_mult = 0.1
 		development_growth_factor = 0.25
 		monthly_learning_lifestyle_xp_gain_mult = 0.2
 		learning_per_stress_level = 2				# S1 stress is fuel
@@ -253,130 +241,18 @@ tenet_nars_sanguine = {
 	}
 }
 
-tenet_nars_university = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_university_no_actor
-			}
-			desc = tenet_nars_university_name
-		}
-	}
-	desc = tenet_nars_university_desc
-	icon = tenet_khachkar
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		tenet_esotericism_mystic_education
-		tenet_esotericism_eccentric_education
-		tenet_esotericism_eccentric_bonuses
-		tenet_scholasticism_university_bonus
-		tenet_scholasticism_cheaper_adult_education
-		tenet_scholasticism_court_scholar
-	}
-
-	character_modifier = {
-		cultural_head_fascination_mult = 0.1
-		learning_scheme_phase_duration = -15
-		learning_scheme_resistance = 10
-	}
-
-	personal_tenet_modifier = {
-		monthly_lifestyle_xp_gain_mult = 0.1
-	}
-
-	personal_tenet_parameters = {
-		tenet_scholasticism_university_chance
-		tenet_be_fruitful_and_multiply_fruitful_upbringing	# +S4/S10 children arrive educated
-	}
-}
-
-tenet_nars_records = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_records_no_actor
-			}
-			desc = tenet_nars_records_name
-		}
-	}
-	desc = tenet_nars_records_desc
-	icon = tenet_household_gods
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		tenet_scholasticism_study_scripture_bonus	# S4 three study sources
-		tenet_pursuit_of_knowledge_study_scripture_bonus
-		better_study_scheme
-		scholasticism_is_holy						# S4 pays off the scholar trait
-		sanctify_artifacts_knowledge
-		withering_mind_less_likely
-	}
-
-	character_modifier = {
-		learning_per_piety_level = 1				# S1 closes the loop: vented stress -> piety -> learning
-		monthly_lifestyle_xp_gain_mult = 0.1
-	}
-
-	personal_tenet_modifier = {
-		monthly_lifestyle_xp_gain_mult = 0.1
-		stress_gain_mult = 0.25						# vanilla drawback becomes fuel for learning_per_stress_level (S1)
-	}
-
-	personal_tenet_parameters = {
-		tenet_scholasticism_scholar_trait			# S4 trait source
-		tenet_scholasticism_travelling_studium
-		tenet_pursuit_of_knowledge_monument_expedition	# expeditions to ancient Selian ruins
-		tenet_pursuit_of_knowledge_study_scripture_bonus
-		better_study_scheme
-		tenet_alexandrian_catechism_catechetical_school	# learning-educated children gain XP
-	}
-
-	traits = {
-		virtues = {
-			diligent = { weight = 20 scale = 1 }
-			patient = { weight = 10 scale = 1 }
-		}
-		sins = {
-			lazy = { weight = 20 scale = 1 }
-		}
-	}
-}
-
-tenet_nars_banking = {
+tenet_nars_artisans = {
 	name = {
 		first_valid = {
 			triggered_desc = {
 
-				desc = tenet_nars_banking_no_actor
+				desc = tenet_nars_artisans_no_actor
 			}
-			desc = tenet_nars_banking_name
+			desc = tenet_nars_artisans_name
 		}
 	}
-	desc = tenet_nars_banking_desc
-	icon = tenet_ora_et_labora
+	desc = tenet_nars_artisans_desc
+	icon = tenet_nars_0_rite #tenet_false_conversion_sanction
 
 	is_shown = {
 		religion_tag = selian_religion
@@ -395,57 +271,8 @@ tenet_nars_banking = {
 		tenet_simony_wealth_fulfillment
 		tenet_adaptive_conversion_resistance
 		better_artifacts
-	}
-
-	character_modifier = {
-		domain_tax_same_faith_mult = 0.25
-		domain_tax_mult = 0.25
-	}
-
-	traits = {
-		virtues = {
-			architect = { weight = 15 scale = 1 }
-		}
-	}
-
-	personal_tenet_parameters = {
-		tenet_megaliths_building_poi_double_rewards
-		tenet_simony_wealth_fulfillment				# +personal side of the same flag
-		spiritual_fulfillment_from_building_personal	# +builders gain fulfillment
-	}
-	personal_tenet_modifier = {
-		build_gold_cost = -0.25
-		build_speed = 0.20
-	}
-}
-
-tenet_nars_artisans = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-
-				desc = tenet_nars_artisans_no_actor
-			}
-			desc = tenet_nars_artisans_name
-		}
-	}
-	desc = tenet_nars_artisans_desc
-	icon = tenet_false_conversion_sanction
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	parameters = {
 		sanctify_artifacts_luxurious
+		sanctify_artifacts_knowledge
 		destroying_artifacts_is_pious				# S6 amphorae in, piety out
 		enable_produce_amphora						# S6
 		better_artifacts
@@ -454,11 +281,15 @@ tenet_nars_artisans = {
 	traits = {
 		virtues = {
 			lifestyle_pottery = { weight = 30 scale = 2 }
+			architect = { weight = 15 scale = 1 }
 		}
 	}
+
 	character_modifier = {
 		monthly_income = 0.15
 		monthly_income_mult = 0.2
+		domain_tax_same_faith_mult = 0.25
+		domain_tax_mult = 0.25
 	}
 
 	personal_tenet_modifier = {
@@ -469,198 +300,9 @@ tenet_nars_artisans = {
 
 	personal_tenet_parameters = {
 		piety_from_sponsoring_inspiration			# +S6 sponsoring artifacts pays piety
-	}
-}
-
-tenet_nars_statecraft = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_statecraft_no_actor
-			}
-			desc = tenet_nars_statecraft_name
-		}
-	}
-	desc = tenet_nars_statecraft_desc
-	icon = tenet_literalism
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		tenet_legalism_title_integration
-		same_culture_conversion_bonus_active		# S7 convert...
-		same_faith_promote_culture_bonus_active		# S7 ...then promote culture
-		sanctify_artifacts_communal					# +
-		religious_legal_pronouncements_law_cost_reduction	# +cheaper laws for centralisation
-	}
-
-	character_modifier = {
-		name = "tenet_communal_identity_opinion"
-		same_culture_opinion = 10
-		same_faith_different_rite_opinion = -20
-		same_faith_different_rite_county_opinion_add = -10
-	}
-
-	personal_tenet_parameters = {
-		tenet_legalism_lawful_authority				# moved here: personal-only flag
-		tenet_communal_identity_sway_piety			# +
-		tenet_communal_identity_free_council_sway	# +
-		tenet_communal_identity_language_devotion	# +
-		tenet_communal_identity_language_reward		# +
-	}
-
-	personal_tenet_modifier = {
-		name = "tenet_communal_identity_opinion"
-		same_culture_opinion = 10
-	}
-}
-
-tenet_nars_tolerance = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_tolerance_no_actor
-			}
-			desc = tenet_nars_tolerance_name
-		}
-	}
-	desc = tenet_nars_tolerance_desc
-	icon = tenet_pacifism
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		reduced_vassal_religion_discontent			# S7 calm vassals while converting
-		pacifist
-		allow_adopt_any_holy_site					# +multicultural holy sites
-		tenet_adaptive_study_rite_bonus				# +S7 studying rites
-	}
-
-	character_modifier = {
-		ai_war_chance = -0.25
-		ai_war_cooldown = 5
-		different_faith_county_opinion_mult = -0.25
-		different_faith_liege_opinion = 15
-		different_faith_suzerain_opinion = 15
-		opinion_of_different_faith_liege = 15
-		opinion_of_different_faith_suzerain = 15
-	}
-
-	special_parameters = {
-		parameter_opinion_override = {
-			pacifist = 10
-		}
-
-		piety_from_long_peace = 2.5					# S8 peace -> piety -> tax per piety level
-	}
-
-	divergence_multiplier = 2.5
-
-	traits = {
-		# Renunciation of violence is the tenet's defining act.
-		virtues = {
-			calm = { weight = 30 scale = 2 }
-		}
-		sins = {
-			wrathful = { weight = 30 scale = 2 }
-		}
-	}
-
-	personal_tenet_modifier = {
-		domain_limit = 2
-		minority_opinion = 10						# +S7 minorities stay calm...
-		minority_tax_contribution_mult = 0.1		# +S7 ...and pay more
-		monthly_diplomacy_lifestyle_xp_gain_mult = 0.2
-	}
-
-	personal_tenet_parameters = {
-		tenet_adaptive_study_rite_bonus				# +
-		adaptive_study_rite_cultural_acceptance		# +
-	}
-}
-
-tenet_nars_patronage = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_patronage_no_actor
-			}
-			desc = tenet_nars_patronage_name
-		}
-	}
-	desc = tenet_nars_patronage_desc
-	icon = tenet_philanthropia
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		piety_from_gifts_active						# S5 gold -> piety
-		tenet_simony_gold_donations					# S5
-		tenet_philanthropia_high_almoner_court_position
-		tenet_philanthropia_generous_bonus
-		host_honored_guests_active
-		tenet_ritual_hospitality_court_position_event_discount
-	}
-
-	character_modifier = {
-		piety_standalone_gain_mult = 0.1
-	}
-
-	county_modifier = {
-		county_opinion_add = 5
-		epidemic_resistance = 5
-	}
-
-	personal_tenet_modifier = {
-		courtier_and_guest_opinion = 10
-		diplomatic_range_mult = 0.25
-		monthly_piety_gain_per_court_position_mult = 0.01
-		monthly_prestige_gain_per_court_position_mult = 0.01
-	}
-
-	personal_tenet_parameters = {
-		tenet_simony_personal_gifts
-		tenet_philanthropia_alms_to_the_destitute
 		tenet_philanthropia_ransom_captives			# S11 pairs with spoils
 		tenet_ritual_hospitality_free_guest_recruitment
-		tenet_ritual_hospitality_invite_to_court_acceptance
-	}
-
-	traits = {
-		virtues = {
-			generous = { weight = 20 scale = 1 }
-			gregarious = { weight = 10 scale = 1 }
-		}
+		leasing_to_military_order_give_spiritual_fulfillment_personal	# moved here: personal-only flag
 	}
 }
 
@@ -674,13 +316,15 @@ tenet_nars_warlike = {
 		}
 	}
 	desc = tenet_nars_warlike_desc
-	icon = tenet_hesychasm
+	icon = tenet_nars_2_rite #tenet_hesychasm
 
 	piety_cost = {
 		value = faith_tenet_cost_massive
 		multiply = 5
 	}
 
+	divergence_multiplier = 0.95
+	
 	is_shown = {
 		religion_tag = selian_religion
 	}
@@ -689,14 +333,28 @@ tenet_nars_warlike = {
 	}
 
 	parameters = {
+		allow_adopt_any_holy_site
+		tenet_pursuit_of_power_become_conqueror		# moved here: personal-only flag
 		tenet_miles_christi_combat_fulfillment		# S9
 		tenet_miles_christi_holy_weapon_blessing
-		tenet_miles_christi_white_peace_defender_bonus	# +
 		great_holy_wars_active
 		sanctify_artifacts_weapons
+		human_sacrifice_active						# S11/S12
+		human_sacrifice_sharing_power_prestige
+	}
+
+	traits = {
+		virtues = {
+			strong = { weight = 30 scale = 2 }
+		}
+		sins = {
+			weak = { weight = 30 scale = 2 }
+		}
 	}
 
 	character_modifier = {
+		ai_war_chance = 0.25
+		ai_war_cooldown = -5
 		prowess_per_piety_level = 1					# S9 piety -> prowess
 		accolade_glory_gain_mult = 0.2
 		monthly_piety_gain_per_knight_mult = 0.01
@@ -705,15 +363,17 @@ tenet_nars_warlike = {
 
 	personal_tenet_modifier = {
 		knight_limit = 2
-		monthly_piety_gain_per_knight_mult = 0.12	# NOTE: vanilla uses 0.01; check this is intended
 	}
 
 	personal_tenet_parameters = {
+		tenet_adaptive_study_rite_bonus				# +
+		adaptive_study_rite_cultural_acceptance		# +
 		tenet_pursuit_of_power_war_victory_fulfillment
-		tenet_pursuit_of_power_become_conqueror		# moved here: personal-only flag
-		leasing_to_military_order_give_spiritual_fulfillment_personal	# moved here: personal-only flag
 		tenet_human_sacrifice_execution_piety_bonus	# moved here: personal-only flag
 		tenet_miles_christi_holy_warrior_trait		# +
+		tenet_human_sacrifice_siege_capture_chance	# S11 capture...
+		tenet_human_sacrifice_courtier_imprisonment_chance
+		tenet_philanthropia_ransom_captives
 	}
 }
 
@@ -728,7 +388,9 @@ tenet_nars_crusade = {
 		}
 	}
 	desc = tenet_nars_crusade_desc
-	icon = tenet_armed_pilgrimages
+	icon = tenet_nars_2_rite #tenet_armed_pilgrimages
+
+	divergence_multiplier = 0.95
 
 	is_shown = {
 		religion_tag = selian_religion
@@ -742,6 +404,8 @@ tenet_nars_crusade = {
 		multiply = 5
 	}
 	parameters = {
+		reduced_vassal_religion_discontent			# S7 calm vassals while converting
+		tenet_adaptive_study_rite_bonus
 		warmonger
 		conquest_cb_enabled
 		invasion_cb_enabled
@@ -771,54 +435,6 @@ tenet_nars_crusade = {
 	}
 }
 
-tenet_nars_vestals = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_vestals_no_actor
-			}
-			desc = tenet_nars_vestals_name
-		}
-	}
-	desc = tenet_nars_vestals_desc
-	icon = tenet_polyamory
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		children_less_likely_to_be_burdened
-		parents_get_hooks_on_children
-		safer_childbirths_active
-		healthier_children_active
-		sanctify_artifacts_ancestral
-		piety_from_childbirth_active				# +S10 births pay piety
-		free_wet_nurse_court_position				# +
-		tenet_adoptionism_legitimize_bastards		# +S10 seduction's children become heirs
-		tenet_adoptionism_legitimize_own_children	# +
-	}
-
-	divergence_multiplier = 1.25
-
-	personal_tenet_parameters = {
-		tenet_filial_piety_child_gold_request
-		tenet_filial_piety_education_completion_reward
-		spiritual_fulfillment_from_childbirth_personal_active	# +S10
-		stress_loss_from_childbirth_personal_active				# +S10
-		tenet_be_fruitful_and_multiply_fruitful_upbringing		# +
-	}
-
-	character_modifier = {
-		fertility = 0.55							# NOTE: with deviance's +25% per sensual trait this stacks hard
-		stress_gain_mult = -0.25
-		stress_loss_mult = 0.25
-	}
-}
-
 tenet_nars_deviance = {
 	name = {
 		first_valid = {
@@ -829,7 +445,7 @@ tenet_nars_deviance = {
 		}
 	}
 	desc = tenet_nars_deviance_desc
-	icon = tenet_carnal_exaltation
+	icon = tenet_nars_2_rite #tenet_carnal_exaltation
 
 	piety_cost = {
 		value = faith_tenet_cost_massive
@@ -844,6 +460,10 @@ tenet_nars_deviance = {
 	}
 
 	parameters = {
+		parents_get_hooks_on_children
+		safer_childbirths_active
+		healthier_children_active
+		piety_from_childbirth_active
 		piety_from_seduction_active					# S10
 		tenet_carnal_exaltation_deviancy_virtuous
 		tenet_carnal_exaltation_sensual_bonus		# S10
@@ -854,7 +474,7 @@ tenet_nars_deviance = {
 		tenet_carnal_exaltation_clergy_no_continence	# +
 	}
 
-	divergence_multiplier = 1.875
+	divergence_multiplier = 0.95
 
 	character_modifier = {
 		max_seduce_schemes_add = 2
@@ -862,70 +482,14 @@ tenet_nars_deviance = {
 	}
 
 	personal_tenet_parameters = {
+		tenet_filial_piety_child_gold_request
+		tenet_filial_piety_education_completion_reward
+		spiritual_fulfillment_from_childbirth_personal_active	# +S10
+		stress_loss_from_childbirth_personal_active				# +S10
+		tenet_be_fruitful_and_multiply_fruitful_upbringing		# +
 		tenet_carnal_exaltation_seduction_fulfillment
 		tenet_carnal_exaltation_commission_artifacts_debauched
 		tenet_polyamory_romance_seduction_fulfillment	# +
 		tenet_polyamory_new_beloved						# +
-	}
-}
-
-tenet_nars_spoils = {
-	name = {
-		first_valid = {
-			triggered_desc = {
-				desc = tenet_nars_spoils_no_actor
-			}
-			desc = tenet_nars_spoils_name
-		}
-	}
-	desc = tenet_nars_spoils_desc
-	icon = tenet_cranial_trophies
-
-	piety_cost = {
-		value = faith_tenet_cost_massive
-		multiply = 5
-	}
-
-	is_shown = {
-		religion_tag = selian_religion
-	}
-	can_pick = {
-		religion_tag = selian_religion
-	}
-
-	parameters = {
-		successful_sieges_give_piety				# S11
-		unlock_destruction_raid_intent
-		human_sacrifice_active						# S11/S12
-		human_sacrifice_sharing_power_prestige
-		death_is_glory
-	}
-
-	character_modifier = {
-		monthly_piety_gain_per_dread_add = 0.01		# S12 dread
-	}
-
-	personal_tenet_modifier = {
-		dread_gain_mult = 0.25						# S12
-		dread_decay_mult = -0.25
-		knight_effectiveness_per_dread = 0.002		# S12 dread -> stronger knights
-		maa_siege_value_mult = 0.1
-	}
-
-	personal_tenet_parameters = {
-		tenet_human_sacrifice_siege_capture_chance	# S11 capture...
-		tenet_human_sacrifice_courtier_imprisonment_chance
-		unlock_destruction_raid_intent_personal
-		tenet_philanthropia_ransom_captives
-	}
-
-	traits = {
-		virtues = {
-			brave = { weight = 15 scale = 1 }
-			callous = { weight = 10 scale = 1 }
-		}
-		sins = {
-			compassionate = { weight = 10 scale = 1 }
-		}
 	}
 }

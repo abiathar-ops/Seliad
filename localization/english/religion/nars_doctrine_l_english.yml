@@ -1,67 +1,35 @@
 ﻿l_english:
- tenet_nars_pantheon_name:0 "Inevitable Cycle"
- tenet_nars_pantheon_no_actor: "Ēchōnes"
- tenet_nars_pantheon_desc:0 "For even in their scorn, they know our rise cannot be halted."
+  tenet_nars_pantheon_name:0 "Unbroken Fate"
+  tenet_nars_pantheon_no_actor:0 "Anánkē"
+  tenet_nars_pantheon_desc:0 "Religious priests warn in the Gods' power but they also remind the populace to not trust in their benevolence.\n\n[Glossary('Kataphronoūntes Isasin Auxēsin Ouk Epischethēsomēn.', 'NARS_1_RITE_GLOSS')]"
 
- tenet_nars_sanguine_name:0 "Old, Promised Land"
- tenet_nars_sanguine_no_actor: "Palaiā-Pātria"  
- tenet_nars_sanguine_desc:0 "Traditions of antiquity, long forgotten by the world, are preserved within our faith." 
+  tenet_nars_sanguine_name:0 "Ancient Heritage"
+  tenet_nars_sanguine_no_actor:0 "Palaiótēs"
+  tenet_nars_sanguine_desc:0 "Traditions of antiquity, long forgotten by the world, are preserved within our faith.\n\n[Glossary('Kataphronoūntes Isasin Auxēsin Ouk Epischethēsomēn.', 'NARS_1_RITE_GLOSS')]"
 
- tenet_nars_erudition_name:0 "First Knowledge"
- tenet_nars_erudition_no_actor: "Prōtoplasía"  
- tenet_nars_erudition_desc:0 "Scholars who spend time in meditation leave with sharpened insight and spiritual understanding."
+  tenet_nars_erudition_name:0 "Divine Wisdom"
+  tenet_nars_erudition_no_actor:0 "Sophía"
+  tenet_nars_erudition_desc:0 "Scholars who spend time in meditation leave with sharpened insight and spiritual understanding.\n\n[Glossary('Kataphronoūntes Isasin Auxēsin Ouk Epischethēsomēn.', 'NARS_1_RITE_GLOSS')]"
 
- tenet_nars_crusade_name:0 "Sacred War"
- tenet_nars_crusade_no_actor: "Theōmachē"  
- tenet_nars_crusade_desc:0 "Through holy conquest, no border or false creed shall withstand our divine truth."
+  tenet_nars_endgame_name:0 "Restoration"
+  tenet_nars_endgame_no_actor:0 "Katástasis"
+  tenet_nars_endgame_desc:0 "The long exile ends, and the lost return to the seat of their ancient dominion, as the cycle always foretold."
 
- tenet_nars_banking_name:0 "Commercial Institutions"
- tenet_nars_banking_no_actor: "Thēsorós"  
- tenet_nars_banking_desc:0 "Wealth is a divine blessing, managed prudently to ensure prosperity for our people."
+  tenet_nars_artisans_name:0 "Blessed Artisans"
+  tenet_nars_artisans_no_actor:0 "Dēmiourgía"
+  tenet_nars_artisans_desc:0 "The hands that shape clay, bronze, and stone do holy work, and a well-made vessel is its own prayer.\n\n[Glossary('Eugéneian áskei, kakías apékhou.', 'NARS_0_RITE_GLOSS')]"
 
- tenet_nars_vestals_name:0 "Unfethered Families"
- tenet_nars_vestals_no_actor: "Akolasía"  
- tenet_nars_vestals_desc:0 "Through $game_concept_enuo$'s blessing, the soul slips its restraints and fertility unleashes."
+  tenet_nars_warlike_name:0 "Belligerence"
+  tenet_nars_warlike_no_actor:0 "Vandreía"
+  tenet_nars_warlike_desc:0 "Discipline forged in youth through drill and hardship makes soldiers worthy of the old glory.\n\n[Glossary('Polemos Pantōn Patēr, Ē Tān Ē Epi Tās.', 'NARS_2_RITE_GLOSS')]"
 
- tenet_nars_endgame_name:0 "Now Returned"
- tenet_nars_endgame_no_actor: "Nóstos"
- tenet_nars_endgame_desc:0 "The long exile ends, and the lost return to the seat of their ancient dominion, as the cycle always foretold."
+  tenet_nars_crusade_name:0 "Holy Conquest"
+  tenet_nars_crusade_no_actor:0 "Hieròs Pólemos"
+  tenet_nars_crusade_desc:0 "Through holy conquest, no border or false creed shall withstand our divine truth.\n\n[Glossary('Polemos Pantōn Patēr, Ē Tān Ē Epi Tās.', 'NARS_2_RITE_GLOSS')]"
 
- tenet_nars_university_name:0 "Thought Schools"
- tenet_nars_university_no_actor: "Scholé"
- tenet_nars_university_desc:0 "Leisure freed from toil is a sacred gift, and in the houses of study it ripens into wisdom for the whole realm."
-
- tenet_nars_artisans_name:0 "Master Artisans"
- tenet_nars_artisans_no_actor: "Tekhnē"
- tenet_nars_artisans_desc:0 "The hands that shape clay, bronze, and stone do holy work, and a well-made vessel is its own prayer."
-
- tenet_nars_statecraft_name:0 "Statecrafts"
- tenet_nars_statecraft_no_actor: "Politiké"
- tenet_nars_statecraft_desc:0 "To order a realm justly is the highest of arts, and rulers who master law and administration serve the divine design."
-
- tenet_nars_tolerance_name:0 "Tolerance"
- tenet_nars_tolerance_no_actor: "Eúnoia"
- tenet_nars_tolerance_desc:0 "Goodwill toward the stranger and his foreign creed binds many peoples beneath one roof in peace and profit."
-
- tenet_nars_warlike_name:0 "Discipline"
- tenet_nars_warlike_no_actor: "Agōgé"
- tenet_nars_warlike_desc:0 "Discipline forged in youth through drill and hardship makes soldiers worthy of the old glory."
-
- tenet_nars_deviance_name:0 "Sacred Prostitutes"
- tenet_nars_deviance_no_actor: "Aporrētoi"
- tenet_nars_deviance_desc:0 "Shrouded in taboo, these holy courtesans prove the gods speak clearly through passion."
-
- tenet_nars_records_name:0 "Archivists"
- tenet_nars_records_no_actor: "Hypomnēmata"  
- tenet_nars_records_desc:0 "The wisdom of past eras is meticulously recorded and studied, turning scholarly pursuit into a holy duty."
-
- tenet_nars_patronage_name:0 "Almsgivings"
- tenet_nars_patronage_no_actor: "Philanthropia"  
- tenet_nars_patronage_desc:0 "Material wealth is a sacred stewardship, multiplied and sanctified through generous almsgiving and civic patronage."
-
- tenet_nars_spoils_name:0 "Plunderers"
- tenet_nars_spoils_no_actor: "Laýra"  
- tenet_nars_spoils_desc:0 "The fall of enemy strongholds and the submission of captives feed both our terrifying martial dread and our fierce piety."
+  tenet_nars_deviance_name:0 "Sacred Courtesans"
+  tenet_nars_deviance_no_actor:0 "Hieródouloi"
+  tenet_nars_deviance_desc:0 "Shrouded in taboo, these holy courtesans prove the gods speak clearly through passion.\n\n[Glossary('Polemos Pantōn Patēr, Ē Tān Ē Epi Tās.', 'NARS_2_RITE_GLOSS')]"
 
  nars_special_name: "Hegemons of Old"
  nars_special_2_name: "Scholars of Yore"
@@ -76,7 +44,7 @@
  nars_special_doctrine_2_descriptive_name: "$nars_special_doctrine_2_name$"
  nars_special_doctrine_2_desc:  "We are scholars of a bygone era, witness to the long history—ageless scions of yore."
 
- doctrine_parameter_enable_produce_amphora: "Unlocks the #v $decision_produce_amphora$#! [decision|E]"
- doctrine_parameter_enable_piously_devote: "Unlocks the #v $decision_piously_devote$#! [decision|E]"
- doctrine_parameter_enable_selian_duchy_conversion: "Unlocks the #V Enforce $game_concept_selianes$#! [decision|E] per #color_green 25#! years"
- narsokratia_must_be_faithfully_restored_global_not: "[narsokratia|E] must be faithfully restored"
+ doctrine_parameter_enable_produce_amphora:1 "Unlocks the #v $decision_produce_amphora$#! [decision|E]"
+ doctrine_parameter_enable_piously_devote:0 "Unlocks the #v $decision_piously_devote$#! [decision|E]"
+ doctrine_parameter_enable_selian_duchy_conversion:0 "Unlocks the #V Enforce $game_concept_selianes$#! [decision|E] per #color_green 25#! years"
+ narsokratia_must_be_faithfully_restored_global_not:0 "[narsokratia|E] must be faithfully restored"

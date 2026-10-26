@@ -124,10 +124,10 @@ nars_naturalis = {
 	tracks = {
 		polimetis = {
 			20 = {
-				martial = 1
-				learning = 1
-				stewardship = 1
-				intrigue = 1
+				martial = 2
+				learning = 2
+				stewardship = 2
+				intrigue = 2
 			}
 			40 = {
 				martial = 2
@@ -136,22 +136,22 @@ nars_naturalis = {
 				intrigue = 2
 			}
 			60 = {
-				martial = 3
-				learning = 3
-				stewardship = 3
-				intrigue = 3
+				martial = 2
+				learning = 2
+				stewardship = 2
+				intrigue = 2
 			}
 			80 = {
-				martial = 4
-				learning = 4
-				stewardship = 4
-				intrigue = 4
+				martial = 2
+				learning = 2
+				stewardship = 2
+				intrigue = 2
 			}
 			100 = {
-				martial = 5
-				learning = 5
-				stewardship = 5
-				intrigue = 5
+				martial = 2
+				learning = 2
+				stewardship = 2
+				intrigue = 2
 			}
 		}
     }

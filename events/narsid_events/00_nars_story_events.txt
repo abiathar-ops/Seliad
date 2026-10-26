@@ -84,6 +84,7 @@ nars_intro.0001 = {
             trait = gregarious
             trait = education_diplomacy_5
             trait = nars_soter
+            trait = nars_naturalis
             trait = beauty_good_3
             trait = physique_good_3
             save_scope_as = alnars
